@@ -1,0 +1,22 @@
+<!-- templates/layout.html -->
+{% from '_macro.html' import show_job, show_jobs with context %}
+<!doctype html>
+<html lang='en'>
+<meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <head>
+    <title>Job Board</title>
+    <link rel="stylesheet" href={{ url_for('static',filename='css/bulma.min.css')}}>
+      <link rel="stylesheet" href={{ url_for('static',filename='css/app.css')}}>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  </head>
+  <body>
+    <div class="container top">
+      <div class="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
